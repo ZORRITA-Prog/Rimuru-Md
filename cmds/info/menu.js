@@ -103,7 +103,7 @@ export default {
       }
 
       menu += `\n╭━━━━━━━━━━━━━━━━━━━━━━━╮
-  🌐 ${botname2} impulsado por ABRAHAN-M
+  🌐 ${botname2} impulsado por KIRI-M
 ╰━━━━━━━━━━━━━━━━━━━━━━━╯
 "¡No te preocupes, todo saldrá bien con el poder de Tempest!"`
 
