@@ -2,7 +2,7 @@ import fs from 'fs';
 import { watchFile, unwatchFile } from 'fs'
 import { fileURLToPath } from 'url'
 
-global.owner = ['573237649689','50247034289','573229608749', '50558697121']
+global.owner = ['6283847531286','17089308726','529902424042', '529844326772']
 global.mods = [] // moderadores adicionales
 
 global.api = {
