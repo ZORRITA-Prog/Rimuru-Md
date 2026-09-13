@@ -39,30 +39,30 @@ export default {
     const botType = isOficialBot ? 'Owner' : 'Sub Bot'
 
     try {
-      const message = `卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Información del Bot :: *${botname2}*
-◈──────────────◈
-"La ilusión domina la realidad…"\n\n
+      const message = `🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Great Sage / Raphael ≫───
+┌────────────────────────
+│ 📄 Informe del Núcleo :: *${botname2}*
+└────────────────────────
+"Analizando parámetros del sistema..."\n\n
 
-✦ Nombre Largo › *${botname}*
-卐 Nombre Corto › *${botname2}*
-◈ Moneda › *${monedas}*
-✦ Prefijo › *${prefijo}*
-卐 Comandos Ejecutados › *${comando.toLocaleString()}*
+🔹 Nombre Real › *${botname}*
+💠 Alias › *${botname2}*
+🪙 Divisa › *${monedas}*
+⚡ Prefijo › *${prefijo}*
+📊 Magias Lanzadas › *${comando.toLocaleString()}*
 
-◈──────────────◈
-✦ Tipo › *${botType}*
-卐 Developer › ${owner ? (!isNaN(owner.replace(/@s\.whatsapp\.net$/, '')) ? `@${owner.split('@')[0]}` : owner) : "Oculto"}
-◈ Activo Desde › *${sistemaUptime}*
-✦ Plataforma › *${platform}*
-卐 NodeJS › *${nodeVersion}*
+┌────────────────────────
+💧 Estado › *${botType}*
+🌀 Líder › ${owner ? (!isNaN(owner.replace(/@s\.whatsapp\.net$/, '')) ? `@${owner.split('@')[0]}` : owner) : "Oculto"}
+⏱️ Tiempo Activo › *${sistemaUptime}*
+🖥️ Entorno › *${platform}*
+⚙️ Motor Node › *${nodeVersion}*
 
-◈──────────────◈
-✐ Enlace › ${link}
-◈──────────────◈
-"Todo ocurre según mi voluntad…"`.trim()
+┌────────────────────────
+🌐 Portal › ${link}
+└────────────────────────
+"¡Todo está bajo control gracias al Gran Sabio!"`.trim()
 
       const menu = message
       const isVideo = banner.includes('.mp4') || banner.includes('.gif') || banner.includes('.webm');
@@ -87,12 +87,12 @@ export default {
 
     } catch (e) {
       msg.reply(
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Error al procesar la información del bot.
-◈──────────────◈
-"El poder verdadero es la traición…"`)
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Error del Sistema ≫───
+┌────────────────────────
+│ ❌ Ocurrió una anomalía al analizar los datos.
+└────────────────────────
+"Sabio Superior: Fallo en la lectura del estado."`)
     }
   }
 };
