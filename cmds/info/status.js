@@ -25,16 +25,16 @@ export default {
     const userCount = Object.keys(users).length || '0'
 
     const estadoBot =
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Estatus :: *${botname2}*
-◈──────────────◈
-✦ Users Registrados › *${userCount.toLocaleString()}*
-卐 Grupos Registrados › *${registeredGroups.toLocaleString()}*
-◈ Comandos Ejecutados › *${comandos.toLocaleString()}*
-◈──────────────◈
-"La ilusión domina la realidad…"`
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Great Sage / Raphael ≫───
+┌────────────────────────
+│ 📊 Estatus del Núcleo :: *${botname2}*
+└────────────────────────
+"Analizando registros del reino..."
+
+👥 Ciudadanos Registrados › *${userCount.toLocaleString()}*
+💬 Territorios Registrados › *${registeredGroups.toLocaleString()}*
+📊 Magias Ejecutadas › *${comandos.toLocaleString()}*`
 
     const sistema = os.type()
     const cpu = os.cpus().length
@@ -43,15 +43,17 @@ export default {
     const arquitectura = os.arch()
 
     const estadoServidor =
-`◈──────────────◈
-✦ Sistema › *${sistema}*
-卐 CPU › *${cpu} cores*
-◈ RAM Total › *${ramTotal} GB*
-✦ RAM Usada › *${ramUsada} GB*
-卐 Arquitectura › *${arquitectura}*
-◈ Host ID › *${hostId}*
-◈──────────────◈
-"Todo ocurre según mi voluntad…"`
+`┌────────────────────────
+│ 🖥️ Recursos del Servidor
+└────────────────────────
+🖥️ Sistema › *${sistema}*
+⚡ Núcleos CPU › *${cpu} cores*
+🧊 RAM Total › *${ramTotal} GB*
+💧 RAM Usada › *${ramUsada} GB*
+⚙️ Arquitectura › *${arquitectura}*
+🌐 Host ID › *${hostId}*
+└────────────────────────
+"¡Análisis del servidor completado con éxito!"`
 
     const message = `${estadoBot}\n\n${estadoServidor}`
 
