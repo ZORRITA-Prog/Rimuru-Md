@@ -35,22 +35,22 @@ export default {
     const match = link.match(linkRegex)
     if (!match || !match[1]) {
       return msg.reply(
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ El enlace ingresado no es válido o está incompleto.
-◈──────────────◈
-"La ilusión domina la realidad…"`)
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Aviso de Análisis ≫───
+┌────────────────────────
+│ ⚠️ El enlace ingresado no es válido o está incompleto.
+└────────────────────────
+"Sabio Superior: Imposible analizar el enlace enviado."`)
     }
 
     if (!args || !args.length) {
       return msg.reply(
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Ingresa el enlace para invitar al bot a tu grupo.
-◈──────────────◈
-"Todo ocurre según mi voluntad…"`)
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Petición de Análisis ≫───
+┌────────────────────────
+│ 📄 Ingresa el enlace para invitar al bot a tu grupo.
+└────────────────────────
+"Sabio Superior: Esperando un enlace válido..."`)
     }
 
     const isOficialBot = botId === global?.sock ? global?.sock?.user?.id?.split(':')[0] + '@s.whatsapp.net' : ''
@@ -65,21 +65,21 @@ export default {
           ? 'Main'
           : 'Sub Bot'
 
-    const sugg = `卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Solicitud Recibida
-◈──────────────◈
-"La ilusión domina la realidad…"\n\n
+    const sugg = `🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Great Sage / Raphael ≫───
+┌────────────────────────
+│ 📜 Solicitud de Alianza Recibida
+└────────────────────────
+"Analizando petición de ingreso..."\n\n
 
-✦ Usuario › ${msg.pushName}
-卐 Enlace › ${args.join(' ')}
-◈ Chat › ${grupo}
+🔹 Ciudadano › ${msg.pushName}
+🌐 Portal › ${args.join(' ')}
+💬 Territorio › ${grupo}
 
-✦ Información del Bot
-卐 Socket › ${botType}
-◈ Nombre › ${botname}
-✦ Versión › @latest`
+┌────────────────────────
+💧 Rango › ${botType}
+💠 Nombre › ${botname}
+⚙️ Versión › @latest`
 
     if (typeof sugg !== 'string' || !sugg.trim()) return
 
@@ -89,23 +89,23 @@ export default {
         await sock.sendMessage(jid, { text: sugg })
       } catch (e) {
         msg.reply(
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ No se pudo enviar la solicitud a ${jid}.
-◈──────────────◈
-"Todo ocurre según mi voluntad…"`)
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Error de Transmisión ≫───
+┌────────────────────────
+│ ❌ No se pudo enviar la solicitud a ${jid}.
+└────────────────────────
+"Sabio Superior: Fallo al intentar conectar con el Líder."`)
       }
     }
 
     await sock.reply(
       msg.chat,
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Enlace de invitación enviado con éxito a los Desarrolladores.
-◈──────────────◈
-"El poder verdadero es la traición…"`,
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Transmisión Exitosa ≫───
+┌────────────────────────
+│ ✅ Enlace de invitación enviado con éxito a los Desarrolladores.
+└────────────────────────
+"¡Todo saldrá bien con el respaldo de Tempest!"`,
       msg,
     )
   },
