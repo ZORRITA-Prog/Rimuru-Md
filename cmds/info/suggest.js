@@ -13,56 +13,56 @@ export default {
       const restante = cooldown - now
       if (restante > 0) {
         return msg.reply(
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Espera *${msToTime(restante)}* para volver a usar este comando.
-◈──────────────◈
-"La ilusión domina la realidad…"`)
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Aviso de Enfriamiento ≫───
+┌────────────────────────
+│ ⏳ Espera *${msToTime(restante)}* para enviar otro mensaje.
+└────────────────────────
+"Sabio Superior: Proceso de enfriamiento en curso."`)
       }
 
       if (!texto) {
         return msg.reply(
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Debes escribir un reporte o sugerencia válida.
-◈──────────────◈
-"Todo ocurre según mi voluntad…"`)
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Petición de Análisis ≫───
+┌────────────────────────
+│ 📄 Debes escribir un reporte o sugerencia válida.
+└────────────────────────
+"Sabio Superior: Esperando contenido para transmitir..."`)
       }
 
       if (texto.length < 10) {
         return msg.reply(
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Tu mensaje es demasiado corto. Explica mejor tu reporte/sugerencia (mínimo 10 caracteres).
-◈──────────────◈
-"El poder verdadero es la traición…"`)
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Datos Insuficientes ≫───
+┌────────────────────────
+│ ⚠️ Tu mensaje es muy corto. Explica mejor tu reporte/sugerencia (mín. 10 caracteres).
+└────────────────────────
+"Sabio Superior: Requiere mayor detalle para procesar."`)
       }
 
       const fecha = new Date()
       const opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
       const fechaLocal = fecha.toLocaleDateString('es-MX', opcionesFecha)
 
-      const tipo = (command === 'report' || command === 'reporte') ? '卐 Reporte' : '卐 Sugerencia'
+      const tipo = (command === 'report' || command === 'reporte') ? '🔹 Reporte' : '🔹 Sugerencia'
       const displayName = msg.pushName || 'Usuario desconocido'
       const numero = msg.sender.split('@')[0]
 
       let reportMsg =
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ ${tipo}
-◈──────────────◈
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Great Sage / Raphael ≫───
+┌────────────────────────
+│ 📜 Transmisión de ${tipo}
+└────────────────────────
 
-✦ Nombre › ${displayName}
-卐 Número › wa.me/${numero}
-◈ Fecha › ${fechaLocal}
+👤 Ciudadano › ${displayName}
+📱 Contacto › wa.me/${numero}
+📅 Fecha › ${fechaLocal}
 
-✦ Mensaje › ${texto}
-◈──────────────◈
-"La ilusión domina la realidad…"`
+📝 Mensaje › ${texto}
+└────────────────────────
+"Enviado desde el Reino de Tempest."`
 
       try {
         await global.sock.reply('120363416930479619@g.us', reportMsg, msg)
@@ -78,21 +78,21 @@ export default {
       await db.updateUser(msg.sender, 'sugCooldown', userData.sugCooldown)
 
       msg.reply(
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Gracias por tu ${(command === 'report' || command === 'reporte') ? 'reporte' : 'sugerencia'}.
-> Tu mensaje fue enviado correctamente a los moderadores.
-◈──────────────◈
-"Todo ocurre según mi voluntad…"`)
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Transmisión Exitosa ≫───
+┌────────────────────────
+│ ✅ Gracias por tu ${(command === 'report' || command === 'reporte') ? 'reporte' : 'sugerencia'}.
+│ > Tu mensaje fue enviado correctamente a los moderadores.
+└────────────────────────
+"¡Todo está bajo control gracias al Gran Sabio!"`)
     } catch {
       msg.reply(
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Error al procesar tu reporte/sugerencia.
-◈──────────────◈
-"El poder verdadero es la traición…"`)
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Error del Sistema ≫───
+┌────────────────────────
+│ ❌ Ocurrió un error al procesar tu reporte/sugerencia.
+└────────────────────────
+"Sabio Superior: Fallo al transmitir el mensaje."`)
     }
   },
 }
