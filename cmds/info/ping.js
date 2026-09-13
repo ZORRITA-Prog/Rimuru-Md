@@ -10,13 +10,13 @@ export default {
     const sent = await sock.sendMessage(
       msg.chat,
       { text:
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ ¡Pong!
-> *${botname}*
-◈──────────────◈
-"La ilusión domina la realidad…"` },
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Great Sage / Raphael ≫───
+┌────────────────────────
+│ ⚡ ¡Pong!
+│ > *${botname}*
+└────────────────────────
+"Sabio Superior: Midiendo velocidad de respuesta..."` },
       { quoted: msg }
     )
 
@@ -25,13 +25,13 @@ export default {
     await sock.sendMessage(
       msg.chat,
       { text:
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Pong!
-> Tiempo ⴵ ${latency}ms
-◈──────────────◈
-"Todo ocurre según mi voluntad…"`,
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Great Sage / Raphael ≫───
+┌────────────────────────
+│ ⚡ ¡Pong!
+│ > Velocidad ⴵ ${latency}ms
+└────────────────────────
+"¡Análisis completado con éxito!"`,
         edit: sent.key },
       { quoted: msg }
     )
