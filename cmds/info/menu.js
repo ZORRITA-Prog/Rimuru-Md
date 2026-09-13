@@ -43,25 +43,25 @@ export default {
 
       const own = await db.getUser(owner);
 
-      let menu = `卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-▐════════════════════▌
-✐ Hola, ${msg.pushName}.
-Bienvenido al dominio de *${botname2}*.
-▐════════════════════▌
+      let menu = `🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Great Sage / Raphael ≫───
+╭━━━━━━━━━━━━━━━━━━━━━━━╮
+  👤 Hola, ${msg.pushName}.
+  Bienvenido a *${botname2}*.
+╰━━━━━━━━━━━━━━━━━━━━━━━╯
 
-✦ Developer › ${owner ? (!isNaN(owner.replace(/@s\.whatsapp\.net$/, '')) ? `${own.name}` : owner) : 'Oculto por privacidad'}
-卐 Tipo › ${botType}
-◈ Sistema/OPR › ${device}
+🌀 Líder › ${owner ? (!isNaN(owner.replace(/@s\.whatsapp\.net$/, '')) ? `${own.name}` : owner) : 'Oculto por privacidad'}
+💧 Rango › ${botType}
+⚙️ Núcleo › ${device}
 
-✦ Fecha › ${tiempo}, ${tiempo2}
-卐 Usuarios › ${users.toLocaleString()}
-◈ Uptime › ${time}
-✦ URL › ${link}
+📅 Tiempo › ${tiempo}, ${tiempo2}
+👥 Ciudadanos › ${users.toLocaleString()}
+⏱️ Actividad › ${time}
+🌐 Dominio › ${link}
 
-▐════════════════════▌
-✐ Categorías disponibles:
-▐════════════════════▌\n`;
+╭━━━━━━━━━━━━━━━━━━━━━━━╮
+  📜 Habilidades Disponibles:
+╰━━━━━━━━━━━━━━━━━━━━━━━╯\n`;
 
       const categoryArg = args[0]?.toLowerCase();
       const categories = {};
@@ -74,18 +74,18 @@ Bienvenido al dominio de *${botname2}*.
 
       if (categoryArg && !categories[categoryArg]) {
         return msg.reply(
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ La categoría *${categoryArg}* no fue encontrada.
-◈──────────────◈
-"La ilusión domina la realidad…"`)
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Aviso de Análisis ≫───
+┌────────────────────────
+│ ⚠️ La habilidad *${categoryArg}* no se encuentra registrada en el Grimorio.
+└────────────────────────
+"Respuesta del Sabio Superior: No se encontraron datos."`)
       }
 
       for (const [category, cmds] of Object.entries(categories)) {
         if (categoryArg && category.toLowerCase() !== categoryArg) continue;
         const catName = category.charAt(0).toUpperCase() + category.slice(1);
-        menu += `\n▐════════════════════▌\n✦ ${catName}\n▐════════════════════▌\n`;
+        menu += `\n┌───≪ ❄️ ${catName} ≫───\n`;
         cmds.forEach((cmd) => {
           const aliases = cmd.alias
             .map((a) => {
@@ -95,16 +95,17 @@ Bienvenido al dominio de *${botname2}*.
                 .toLowerCase()
               return `${prefix}${aliasClean}`
             })
-            .join(' › ')
-          menu += `卐 ${aliases} ${cmd.uso ? `+ ${cmd.uso}` : ''}\n`
-          menu += `◈ ${cmd.desc}\n`
+            .join(' ✦ ')
+          menu += `│ 🔹 ${aliases} ${cmd.uso ? `+ ${cmd.uso}` : ''}\n`
+          menu += `│ 📄 ${cmd.desc}\n`
         })
+        menu += `└────────────────────────\n`
       }
 
-      menu += `\n▐════════════════════▌
-✐ ${botname2} desarrollado por ABRAHAN-M
-▐════════════════════▌
-"Todo ocurre según mi voluntad…"`
+      menu += `\n╭━━━━━━━━━━━━━━━━━━━━━━━╮
+  🌐 ${botname2} impulsado por ABRAHAN-M
+╰━━━━━━━━━━━━━━━━━━━━━━━╯
+"¡No te preocupes, todo saldrá bien con el poder de Tempest!"`
 
       const isVideo = banner.includes('.mp4') || banner.includes('.gif') || banner.includes('.webm');
       const contextBase = {
@@ -127,12 +128,12 @@ Bienvenido al dominio de *${botname2}*.
       }
     } catch (e) {
       await msg.reply(
-`卐卐卐 〔 AIZEN BOT 〕 卐卐卐
-━━ Kyōka Suigetsu ━━
-◈──────────────◈
-✐ Error al procesar el menú.
-◈──────────────◈
-"El poder verdadero es la traición…"`)
+`🌀⚡ 〔 RIMURU TEMPEST 〕 ⚡🌀
+───≪ Error del Sistema ≫───
+┌────────────────────────
+│ ❌ Ocurrió una anomalía al desplegar el menú.
+└────────────────────────
+"Sabio Superior: Proceso interrumpido por un error inesperado."`)
     }
   },
 };
