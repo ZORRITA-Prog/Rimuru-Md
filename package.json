@@ -1,5 +1,5 @@
 {
-  "name": "Sosuke aizen",
+  "name": "Rimuru-Md",
   "version": "4.0",
   "description": "WhatsApp Bot updated to the latest version.",
   "main": "index.js",
@@ -21,7 +21,7 @@
     "whatsapp",
     "baileys"
   ],
-  "author": "ABRAHAN-M",
+  "author": "Kiri-M",
   "license": "MIT",
   "engines": {
     "node": ">=22.13.0",
