@@ -54,8 +54,8 @@ Por favor reintenta más tarde.
 }
 
 global.my = {
-  ch: "120363427270057983@newsletter", // Oficial
-  ch2: "120363427270057983@newsletter" // API
+  ch: "", // Oficial
+  ch2: "" // API
 }
 
 let file = fileURLToPath(import.meta.url)
